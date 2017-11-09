@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# Created by .ignore support plugin (hsz.mobi)
+### Node template
+>>>>>>> initial comit
 # Logs
 logs
 *.log
@@ -56,4 +61,7 @@ typings/
 
 # dotenv environment variables file
 .env
+
+dist
+src/config/node.env.js
 

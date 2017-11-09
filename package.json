@@ -1,0 +1,45 @@
+{
+  "name": "es6-seed",
+  "version": "1.0.0",
+  "description": "Es6 seed project",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=development gulp",
+    "build": "NODE_ENV=production gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "js",
+    "es6"
+  ],
+  "author": "Pierre-Alain Besançon",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.5.0",
+    "eslint": "^4.10.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-copy": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.8",
+    "node-sass": "^4.6.0",
+    "run-sequence": "^2.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "engines": {
+    "node": ">= 7"
+  }
+}
