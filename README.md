@@ -1,5 +1,12 @@
 # gulp-es6-seed
-Seed project Gulp es6, because you don't like webpack
+Seed project Gulp es6, because you don't like webpack. 
+
+## Featues
+
+- es6
+- Sass
+- Hot reload
+- Minification
 
 ## Requirements
 
@@ -14,7 +21,7 @@ Command`yarn install` ou `npm install`
 
 ### Development
 
-    yarn star
+    yarn start
 
 ou
     

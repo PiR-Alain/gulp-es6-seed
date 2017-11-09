@@ -11,7 +11,8 @@
   "keywords": [
     "eslint",
     "js",
-    "es6"
+    "es6",
+    "sass"
   ],
   "author": "Pierre-Alain Besançon",
   "license": "ISC",
