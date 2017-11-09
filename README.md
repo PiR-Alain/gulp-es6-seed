@@ -1,7 +1,7 @@
 # gulp-es6-seed
-Seed project Gulp es6, because you don't like webpack. 
+Seed project Gulp es6 with sass, because you don't like webpack. 
 
-## Featues
+## Features
 
 - es6
 - Sass
