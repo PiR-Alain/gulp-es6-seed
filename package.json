@@ -1,6 +1,6 @@
 {
   "name": "es6-seed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Es6 seed project",
   "main": "app.js",
   "scripts": {
