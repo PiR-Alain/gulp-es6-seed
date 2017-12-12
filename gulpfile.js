@@ -33,6 +33,14 @@ gulp.task('js', () => {
     let browMe = browserify(srcFolder, {debug: (process.env.NODE_ENV === 'development'), extensions: ['es6']})
         .transform('babelify', {presets: ['env']})
         .bundle()
+        .on('error', function (err) {
+            console.log('[JS Error]');
+            console.log(err.filename + (err.loc ? `( ${err.loc.line}, ${err.loc.column} ): ` : ': '));
+            console.log('error Babel: ' + err.message + '\n');
+            console.log(err.codeFrame);
+            browserSync.notify('<span style="color:#F6DD3B">[JS Error]</span> ' + err.filename + (err.loc ? `( ${err.loc.line}, ${err.loc.column} )` : ''), 10000)
+            this.emit('end');
+        })
         .pipe(source('bundle.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true}))
@@ -81,6 +89,13 @@ gulp.task('sass', function () {
     let sassMe = gulp.src(sassWatchPath)
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
+        .on('error', function (err) {
+            console.log('[SASS Error]');
+            console.log(err.file + `( ${err.line}, ${err.column} )`);
+            console.log('error Sass: ' + err.message + '\n');
+            browserSync.notify('<span style="color:#CD669A">[SASS Error]</span> ' + err.file + `( ${err.line}, ${err.column} )`, 10000)
+            this.emit('end');
+        })
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
