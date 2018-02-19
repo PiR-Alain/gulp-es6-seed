@@ -8,7 +8,7 @@ export default class Character {
 
     sayHello() {
         const {first_name,last_name} = this;
-        return `${this.helloWord} ${this.first_name} ${this.helloWord}`;
+        return `${this.helloWord} ${this.first_name}`;
     }
 
 }

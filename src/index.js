@@ -1,5 +1,4 @@
 import Character from './character';
-import {envVar} from './config/node.env';
 
 import {getRandomCharacters} from './services/characters.service';
 
@@ -11,6 +10,3 @@ const somebodySayHello = () => {
 };
 
 window.somebodySayHello = somebodySayHello;
-
-document.getElementById('version').innerText = envVar.NODE_ENV;
-
