@@ -23,11 +23,8 @@ const srcFolder = './src/index.js',
     sassWatchPath = './src/**/*.scss',
     browserDir = distFolder;
 
-const requiredEnvVar = ['NODE_ENV'];
-
-
-gulp.task('default', (callback) => runSequence('clean', ['config', 'copy-public', 'js', 'sass'], 'watch', 'browser-sync', callback));
-gulp.task('build', (callback) => runSequence('clean', ['config', 'sass', 'copy-public', 'js'], callback));
+gulp.task('default', (callback) => runSequence('clean', ['copy-public', 'js', 'sass'], 'watch', 'browser-sync', callback));
+gulp.task('build', (callback) => runSequence('clean', ['sass', 'copy-public', 'js'], callback));
 
 gulp.task('js', () => {
     let browMe = browserify(srcFolder, {debug: (process.env.NODE_ENV === 'development'), extensions: ['es6']})
@@ -108,20 +105,4 @@ gulp.task('sass', function () {
 
     sassMe.pipe(gulp.dest(`${distFolder}/css`))
         .pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('config', () => {
-    let env = {};
-    if (requiredEnvVar.length) {
-        for (let [key, value] of Object.entries(process.env)) {
-            if (requiredEnvVar.includes(key)) {
-                env[key] = value;
-            }
-        }
-    } else {
-        env = process.env;
-    }
-    gulp.src('config/node.env.js')
-        .pipe(replace('NODE_ENV', JSON.stringify(env)))
-        .pipe(gulp.dest('src/config/'));
 });

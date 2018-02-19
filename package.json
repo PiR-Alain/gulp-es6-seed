@@ -4,8 +4,8 @@
   "description": "Es6 seed project",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=development gulp",
-    "build": "NODE_ENV=production gulp build",
+    "start": "gulp",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -24,13 +24,12 @@
     "babelify": "^8.0.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.5.0",
-    "eslint": "^4.10.0",
+    "eslint": "^4.18.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-copy": "^1.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
